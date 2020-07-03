@@ -9,13 +9,13 @@ const Account = require('../models/account');
 
 
 /// ***************** 
-const urilc = 'mongodb://localhost:8080/ShopMoi';
-const uri = "mongodb+srv://db02:YgAWa0nvjXWYdwHj@cluster0-uqxs1.mongodb.net/ShopMoi?retryWrites=true&w=majority";
+const uri = 'mongodb://localhost:27017/atnshop';
+const urirem = "mongodb+srv://db03:aGBZRta11CBmt8qL@cluster0-q8a6f.mongodb.net/CloudDB?retryWrites=true&w=majority";
 
 
 /// ***************** ***************** *****************
 /// ***************** Database & Bảng dữ liệu cần Truy vấn
-const NameDataBase =  "ShopMoi"; // "CloudDB";
+const NameDataBase =  "atnshop"; // "CloudDB";
 
 
 async function viewLogin(request, response) {

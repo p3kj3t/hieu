@@ -16,7 +16,7 @@
                 <div class="row">
 				<table width = "100%">
                 <% for (var i = 0; i < productlist.length; i++) { %>
-						<tr style="border-width: 5px;border-color: rgb(33, 158, 81);padding-bottom: 15px;">
+						<tr style="border-width: 5px;border-color: rgb(53, 77, 66)padding-bottom: 15px;">
 							<td>
 								<img width="300px" height="230px" src="/images/<%= productlist[i].urlImg%>">
 							</td>
@@ -27,8 +27,15 @@
 								
 								<p><b>Information: </b></p>                                
                                 <p><%= productlist[i].Information%> </p>
-								<button type="button" class="btn btn-success" onclick="themvao('<%= productlist[i]._id %>', '<%= productlist[i].Name %>', '<%= productlist[i].Price%>' )">Thêm vào</button>
-							</td>
+                                <button type="button" class="btn btn-success" onclick="themvao('<%= productlist[i]._id %>', '<%= productlist[i].Name %>', '<%= productlist[i].Price%>' )">Thêm vào</button>
+                            <style>
+                               button{
+                                   background-color: black;
+                                   color: red;
+                               }
+                            </style>
+                            </td>
+                            
 						</tr>
                     <% } %>
 					
@@ -57,7 +64,6 @@
       </div>
 
 <script>
-    
     var dsspmua = "";
     var giohang = {};
 
@@ -68,14 +74,11 @@
 
         if (hangthem) {
             hangthem["soluong"] += 1
-            
-            
         } else {
             hangthem = { "ten" : xName, "gia" : xPrice, "soluong" : 1};
-            
         }
         giohang[xID] = hangthem;
-        
+
         console.log(hangthem);
 
     }
@@ -92,7 +95,6 @@
         var xkeys = Object.keys(giohang);
         var showlist = "";
         dsspmua = "";
-        
 
         for(j=0; j<xkeys.length; j++)
         {
@@ -100,7 +102,7 @@
             showlist += "<tr> <td> " 
                 + giohang[ xkeys[j] ]["ten"] 
                 + " </td> <td> "  + giohang[ xkeys[j] ]["soluong"] + " </td> <td> "
-                + giohang[ xkeys[j] ]["gia"]*giohang[ xkeys[j] ]["soluong"] + " </td></tr>";
+                + giohang[ xkeys[j] ]["gia"] + " </td></tr>";
         };
 
 
