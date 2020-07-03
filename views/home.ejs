@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+
+
+<% if ( username ) { %>
+    <P> <%=username%> </P>
+<% }  %>
+<div class="row">
+      <div class="card">
+        <h2>Our Staff:</h2>
+        <div class="fakeimg" >
+<P><img src="images/midu-01.jpg"></P>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card">
+      <h3>Toy:</h3>
+      <div class="fakeimg" >
+<P><img src="images/boa hancock.jpg"></P>
+<P><img src="images/Nakajima Atsushi.jpg"></P>
+      </div>
+  </div>
+  <a href="/order" >Order</a>
+</div>
+
+<a  > <%= mesg %> </a>
+
